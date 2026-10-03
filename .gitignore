@@ -1,0 +1,53 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+dist/
+build/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Environment variables
+.env
+.env.local
+
+# Model artifacts (don't commit large files)
+models/*.pkl
+models/*.pt
+models/*.pth
+models/*.h5
+models/*.onnx
+
+# Data (sensitive medical documents should never be committed)
+data/
+dataset/
+*.jpg
+*.jpeg
+*.png
+*.tiff
+*.pdf
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
