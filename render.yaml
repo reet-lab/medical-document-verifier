@@ -3,16 +3,18 @@ services:
     name: medical-document-verifier
     runtime: python
     plan: free
-    buildCommand: pip install -r requirements.txt
+    buildCommand: pip install --upgrade pip && pip install -r requirements.txt
     startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
     envVars:
       - key: PYTHON_VERSION
-        value: "3.13"
+        value: "3.12"
       - key: DEBUG
         value: "false"
       - key: RELOAD
         value: "false"
       - key: LOG_LEVEL
         value: "INFO"
+      - key: MAX_FILE_SIZE_MB
+        value: "10"
       - key: CORS_ORIGINS
-        sync: false  # set manually in Render dashboard
+        value: "*"
